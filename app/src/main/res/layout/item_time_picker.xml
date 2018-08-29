@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/bg_item_normal_100"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_leave_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:text="\u3000请假时间："
+            android:textColor="@color/word_4545"
+            android:textSize="@dimen/font_size_14" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout_leave_startime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="@dimen/padding_5"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginTop="@dimen/padding_5"
+                android:layout_weight="1"
+                android:background="@drawable/bg_textview_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_leave_startime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_weight="1"
+                    android:hint="--请选择开始时间--"
+                    android:paddingLeft="@dimen/margin_15"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:src="@mipmap/img_apply_date" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_leave_endtime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="@dimen/padding_5"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginTop="@dimen/padding_5"
+                android:layout_weight="1"
+                android:background="@drawable/bg_textview_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_leave_endtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_weight="1"
+                    android:hint="--请选择结束时间--"
+                    android:paddingLeft="@dimen/margin_15"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:src="@mipmap/img_apply_date" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_1"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:background="@color/main_line" />
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relative_toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_toast_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding_3"
+        android:paddingLeft="@dimen/padding_10"
+        android:paddingRight="@dimen/padding_10"
+        android:paddingTop="@dimen/padding_3">
+
+        <TextView
+            android:id="@+id/chapterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/padding_10"
+            android:text="错误信息"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_14" />
+    </RelativeLayout>
+</LinearLayout>

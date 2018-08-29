@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--研发基本功能-->
+    <string-array name="quick_menu_sign">
+        <item>写日报</item>
+        <item>请假申请</item>
+        <item>出差申请</item>
+        <item>签到记录</item>
+    </string-array>
+    <!--签到-->
+    <string-array name="quick_menu_sign_in">
+        <item>写日报</item>
+        <item>请假申请</item>
+        <item>出差申请</item>
+        <item>外派签到</item>
+        <item>签到记录</item>
+    </string-array>
+    <!--签退-->
+    <string-array name="quick_menu_sign_out">
+        <item>写日报</item>
+        <item>请假申请</item>
+        <item>出差申请</item>
+        <item>外派签退</item>
+        <item>签到记录</item>
+    </string-array>
+    <!--营销基本功能-->
+    <string-array name="quick_menu_market">
+        <item>写日报</item>
+        <item>请假申请</item>
+        <item>出差申请</item>
+        <item>拜访签到</item>
+        <item>写跟进</item>
+        <item>客户录入</item>
+        <item>签到记录</item>
+    </string-array>
+    <!--签到-->
+    <string-array name="quick_menu_market_in">
+        <item>写日报</item>
+        <item>请假申请</item>
+        <item>出差申请</item>
+        <item>拜访签到</item>
+        <item>写跟进</item>
+        <item>客户录入</item>
+        <item>外派签到</item>
+        <item>签到记录</item>
+    </string-array>
+    <!--签退-->
+    <string-array name="quick_menu_market_out">
+        <item>写日报</item>
+        <item>请假申请</item>
+        <item>出差申请</item>
+        <item>拜访签到</item>
+        <item>写跟进</item>
+        <item>客户录入</item>
+        <item>外派签退</item>
+        <item>签到记录</item>
+    </string-array>
+    <!--研发基本功能-->
+    <integer-array name="image_menu_sign">
+        <item>@mipmap/img_quick_1</item>
+        <item>@mipmap/img_quick_2</item>
+        <item>@mipmap/img_quick_3</item>
+        <item>@mipmap/img_quick_9</item>
+    </integer-array>
+    <!--签到-->
+    <integer-array name="image_menu_sign_in">
+        <item>@mipmap/img_quick_1</item>
+        <item>@mipmap/img_quick_2</item>
+        <item>@mipmap/img_quick_3</item>
+        <item>@mipmap/img_quick_7</item>
+        <item>@mipmap/img_quick_9</item>
+    </integer-array>
+    <!--签退-->
+    <integer-array name="image_menu_sign_out">
+        <item>@mipmap/img_quick_1</item>
+        <item>@mipmap/img_quick_2</item>
+        <item>@mipmap/img_quick_3</item>
+        <item>@mipmap/img_quick_8</item>
+        <item>@mipmap/img_quick_9</item>
+    </integer-array>
+    <!--营销基本功能-->
+    <integer-array name="image_menu_market">
+        <item>@mipmap/img_quick_1</item>
+        <item>@mipmap/img_quick_2</item>
+        <item>@mipmap/img_quick_3</item>
+        <item>@mipmap/img_quick_4</item>
+        <item>@mipmap/img_quick_5</item>
+        <item>@mipmap/img_quick_6</item>
+        <item>@mipmap/img_quick_9</item>
+    </integer-array>
+    <!--签到-->
+    <integer-array name="image_menu_market_in">
+        <item>@mipmap/img_quick_1</item>
+        <item>@mipmap/img_quick_2</item>
+        <item>@mipmap/img_quick_3</item>
+        <item>@mipmap/img_quick_4</item>
+        <item>@mipmap/img_quick_5</item>
+        <item>@mipmap/img_quick_6</item>
+        <item>@mipmap/img_quick_7</item>
+        <item>@mipmap/img_quick_9</item>
+    </integer-array>
+    <!--签退-->
+    <integer-array name="image_menu_market_out">
+        <item>@mipmap/img_quick_1</item>
+        <item>@mipmap/img_quick_2</item>
+        <item>@mipmap/img_quick_3</item>
+        <item>@mipmap/img_quick_4</item>
+        <item>@mipmap/img_quick_5</item>
+        <item>@mipmap/img_quick_6</item>
+        <item>@mipmap/img_quick_8</item>
+        <item>@mipmap/img_quick_9</item>
+    </integer-array>
+
+    <!--  日常办公模块  -->
+    <string-array name="work_menu_normal">
+        <item>通知公告</item>
+        <item>工作日报</item>
+        <item>领导审批</item>
+    </string-array>
+
+    <!--  日常办公模块  -->
+    <string-array name="work_menu_sd_normal">
+        <item>通知公告</item>
+        <item>工作日报</item>
+        <item>领导审批</item>
+        <item>手动定位</item>
+    </string-array>
+
+    <!--定位-->
+    <string-array name="work_menu_location">
+        <item>通知公告</item>
+        <item>工作日报</item>
+        <item>领导审批</item>
+        <item>定位跟踪</item>
+    </string-array>
+
+    <!--手dong定位-->
+    <string-array name="work_menu_sd_location">
+        <item>通知公告</item>
+        <item>工作日报</item>
+        <item>领导审批</item>
+        <item>定位跟踪</item>
+        <item>手动定位</item>
+    </string-array>
+
+    <!--sd定位-->
+    <integer-array name="image_work_sd_location">
+        <item>@mipmap/img_work_1</item>
+        <item>@mipmap/img_work_2</item>
+        <item>@mipmap/img_work_3</item>
+        <item>@mipmap/img_work_4</item>
+        <item>@mipmap/dwsd</item>
+    </integer-array>
+
+    <!--常用-->
+    <integer-array name="image_work_normal">
+        <item>@mipmap/img_work_1</item>
+        <item>@mipmap/img_work_2</item>
+        <item>@mipmap/img_work_3</item>
+    </integer-array>
+    <!--定位-->
+    <integer-array name="image_work_location">
+        <item>@mipmap/img_work_1</item>
+        <item>@mipmap/img_work_2</item>
+        <item>@mipmap/img_work_3</item>
+        <item>@mipmap/img_work_4</item>
+    </integer-array>
+
+    <!--定位-->
+    <integer-array name="image_work_dw_location">
+        <item>@mipmap/img_work_1</item>
+        <item>@mipmap/img_work_2</item>
+        <item>@mipmap/img_work_3</item>
+        <item>@mipmap/dwsd</item>
+    </integer-array>
+
+    <!--  客户管理  -->
+    <string-array name="custom_menu_manager">
+        <item>客户录入</item>
+        <item>客户管理</item>
+        <item>客户跟进</item>
+        <item>客户分析</item>
+    </string-array>
+    <integer-array name="image_custom_manager">
+        <item>@mipmap/img_custom_1</item>
+        <item>@mipmap/img_custom_2</item>
+        <item>@mipmap/img_custom_3</item>
+        <item>@mipmap/img_custom_4</item>
+    </integer-array>
+    <!--    客户状态    -->
+    <string-array name="customer_state">
+        <item>潜在客户</item>
+        <item>意向客户</item>
+        <item>成交客户</item>
+        <item>失败客户</item>
+    </string-array>
+    <string-array name="contacts_way">
+        <item>传真</item>
+        <item>电话</item>
+        <item>登门拜访</item>
+        <item>邮件</item>
+    </string-array>
+    <string-array name="follow_state">
+        <item>已结束</item>
+        <item>计划中</item>
+        <item>进行中</item>
+    </string-array>
+    <string-array name="input_seas">
+        <item>无效客户</item>
+        <item>因价格放弃</item>
+        <item>因质量放弃</item>
+        <item>联系方式错误</item>
+        <item>无商品需求</item>
+        <item>放弃客户</item>
+    </string-array>
+    <string-array name="father_data">
+        <item>客户状态</item>
+        <item>客户分类</item>
+        <item>热点客户</item>
+        <item>意向产品</item>
+        <item>报备状态</item>
+        <item>所属大区</item>
+        <item>拥有人</item>
+    </string-array>
+    <string-array name="son_customer_intent">
+        <item>不限</item>
+        <item>潜在客户</item>
+        <item>意向客户</item>
+        <item>成交客户</item>
+        <item>失败客户</item>
+    </string-array>
+
+    <!--跟进记录的筛选框，父级-->
+    <string-array name="search_followrecord">
+        <item>联系方式</item>
+        <item>跟进状态</item>
+        <item>跟进客户成熟度</item>
+        <item>跟进人</item>
+    </string-array>
+    <string-array name="search_ways">
+        <item>传真</item>
+        <item>电话</item>
+        <item>登门拜访</item>
+        <item>邮件</item>
+    </string-array>
+    <string-array name="search_ways_follow">
+        <item>不限</item>
+        <item>传真</item>
+        <item>电话</item>
+        <item>登门拜访</item>
+        <item>邮件</item>
+    </string-array>
+    <string-array name="followstate_list_follow">
+        <item>不限</item>
+        <item>已结束</item>
+        <item>计划中</item>
+        <item>进行中</item>
+    </string-array>
+
+    <!--日报查询条件-->
+    <string-array name="daily_date">
+        <item>时间不限</item>
+        <item>本日</item>
+        <item>昨日</item>
+        <item>本周</item>
+        <item>上周</item>
+        <item>本月</item>
+        <item>上月</item>
+    </string-array>
+
+    <!--签到查询条件-->
+    <string-array name="qd_date">
+        <item>时间不限</item>
+        <item>本月</item>
+        <item>上月</item>
+    </string-array>
+</resources>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main">
+
+    <com.tcrj.spv.views.control.SuperScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@mipmap/img_banner" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_1"
+                    android:background="@color/main_line" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10"
+                    android:drawableLeft="@mipmap/img_cutline"
+                    android:drawablePadding="@dimen/padding_5"
+                    android:text="快捷功能"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_16"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_1"
+                    android:background="@color/main_line" />
+
+                <com.tcrj.spv.views.control.MyGridView
+                    android:id="@+id/grid_sign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:horizontalSpacing="@dimen/line_1"
+                    android:listSelector="@null"
+                    android:numColumns="4"
+                    android:scrollbars="none"
+                    android:verticalSpacing="@dimen/line_1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_1"
+                    android:background="@color/main_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10"
+                    android:drawableLeft="@mipmap/img_cutline"
+                    android:drawablePadding="@dimen/padding_5"
+                    android:text="日常办公"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_16"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_1"
+                    android:background="@color/main_line" />
+
+                <com.tcrj.spv.views.control.MyGridView
+                    android:id="@+id/grid_office"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:horizontalSpacing="@dimen/line_1"
+                    android:listSelector="@null"
+                    android:numColumns="4"
+                    android:scrollbars="none"
+                    android:verticalSpacing="@dimen/line_1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_1"
+                    android:background="@color/main_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_custom_manage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10"
+                    android:drawableLeft="@mipmap/img_cutline"
+                    android:drawablePadding="@dimen/padding_5"
+                    android:text="客户管理"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_16"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_1"
+                    android:background="@color/main_line" />
+
+                <com.tcrj.spv.views.control.MyGridView
+                    android:id="@+id/grid_custom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:horizontalSpacing="@dimen/line_1"
+                    android:listSelector="@null"
+                    android:numColumns="4"
+                    android:scrollbars="none"
+                    android:verticalSpacing="@dimen/line_1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_1"
+                    android:background="@color/main_line" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.tcrj.spv.views.control.SuperScrollView>
+</LinearLayout>

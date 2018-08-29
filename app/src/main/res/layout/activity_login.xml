@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_login">
+
+    <LinearLayout
+        android:id="@+id/layout_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/heigth_45"
+        android:layout_marginBottom="30dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/iv_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="智慧延安协同办公系统"
+            android:textColor="@color/white"
+            android:textSize="23sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/margin_10"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_8">
+
+            <EditText
+                android:id="@+id/edt_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入账号"
+                android:inputType="text"
+                android:lines="1"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_18" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_8">
+
+            <EditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:lines="1"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_18" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_height_35"
+            android:background="@drawable/bg_login_background"
+            android:text="登录"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_20" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_15"
+            android:text="忘记密码请联系管理员"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_14" />
+    </LinearLayout>
+</RelativeLayout>

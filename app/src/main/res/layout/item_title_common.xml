@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app1="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bg_height_55"
+    android:background="@mipmap/bg_title90">
+
+    <ImageButton
+        android:id="@+id/img_back_common"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:padding="@dimen/margin_8"
+        android:src="@mipmap/img_back" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/comment_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_tab_selector"
+        android:padding="-1dp"
+        app1:tabGravity="fill"
+        app1:tabIndicatorHeight="0dp"
+        app1:tabMode="fixed"
+        app:tabIndicatorColor="@color/white"
+        app:tabIndicatorHeight="0dp"
+        app:tabPaddingBottom="-1dp"
+        app:tabPaddingEnd="-1dp"
+        app:tabPaddingStart="-1dp"
+        app:tabPaddingTop="-1dp"
+        app:tabTextColor="#FF000000" />
+</RelativeLayout>

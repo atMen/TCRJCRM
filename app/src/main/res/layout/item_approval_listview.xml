@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/btn_item_grid_free"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.tcrj.spv.views.control.CircleImageView
+                android:layout_width="@dimen/grid_height_45"
+                android:layout_height="@dimen/grid_height_45"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/padding_5"
+                android:scaleType="fitXY"
+                android:src="@mipmap/img_photo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/padding_3"
+                    android:paddingTop="@dimen/padding_5">
+
+                    <TextView
+                        android:id="@+id/tv_approval_apply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="出差申请"
+                        android:textColor="@color/word_4545"
+                        android:textSize="@dimen/font_size_14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_approval_remain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/word_7373"
+                        android:textSize="@dimen/font_size_12" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/padding_3">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="发起人："
+                            android:textColor="@color/word_7373"
+                            android:textSize="@dimen/font_size_12" />
+
+                        <TextView
+                            android:id="@+id/tv_approval_launch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="水中月"
+                            android:textColor="@color/word_7373"
+                            android:textSize="@dimen/font_size_12" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="当前节点："
+                            android:textColor="@color/word_7373"
+                            android:textSize="@dimen/font_size_12" />
+
+                        <TextView
+                            android:id="@+id/tv_approval_node"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/word_6616"
+                            android:textSize="@dimen/font_size_12" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_approval_applytime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="申请时间"
+                    android:paddingBottom="@dimen/padding_5"
+                    android:paddingTop="@dimen/padding_3"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_12" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/margin_10"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@mipmap/img_more" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_1"
+        android:background="@color/main_line" />
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/card_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:background="@drawable/dialog_background"
+        android:id="@+id/ll_content"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title_dialog"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            />
+
+        <EditText
+            android:layout_margin="5dp"
+            android:background="@color/bg_grid"
+            android:textColor="@color/word_7373"
+            android:id="@+id/edt_spyj"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:textSize="15dp"
+            android:hint="请输入审核意见"
+            android:gravity="left"
+            android:padding="5dp"
+            />
+
+        <Button
+            android:id="@+id/btn_sure"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/bg_button_background"
+            android:text="确定"
+            android:textSize="13sp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+

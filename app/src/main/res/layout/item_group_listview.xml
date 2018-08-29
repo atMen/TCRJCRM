@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/item_line_height" />
+
+    <include layout="@layout/item_group_head" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:background="@drawable/bg_dotted_line"
+        android:layerType="software" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_sign_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padding_3"
+            android:paddingTop="@dimen/padding_3">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="签到时间："
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/tv_signin_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="签退时间："
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/tv_signout_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_sign_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/padding_3"
+                android:paddingTop="@dimen/padding_3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="签到状态："
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/tv_signin_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/padding_3"
+                android:paddingTop="@dimen/padding_3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="签退状态："
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/tv_signout_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_nothing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/margin_10"
+            android:paddingTop="@dimen/margin_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="今天是休息日"
+                android:textColor="@color/word_eb30"
+                android:textSize="@dimen/font_size_14"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

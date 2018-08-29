@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/item_title" />
+
+    <com.tcrj.spv.views.control.SuperScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/item_write_daily_title" />
+
+            <LinearLayout
+                style="@style/bg_item_normal_45"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_width_10"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/padding_5"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/img_daily_date" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="当前时间"
+                        android:textColor="@color/word_4545"
+                        android:textSize="@dimen/font_size_14" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_daily_nowtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_width_10"
+                    android:hint="2017-10-26 13:24:45"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <include layout="@layout/item_line_height" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/bg_item_normal_45"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/padding_5"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/img_before_plan" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="昨天计划情况"
+                        android:textColor="@color/word_4545"
+                        android:textSize="@dimen/font_size_14" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_1"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:background="@color/main_line" />
+
+                <TextView
+                    android:id="@+id/tv_before_plan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="未获取到计划信息..."
+                    android:lineSpacingExtra="@dimen/line_3"
+                    android:minLines="4"
+                    android:padding="@dimen/margin_10"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+
+                <include layout="@layout/item_line_height" />
+
+                <LinearLayout
+                    style="@style/bg_item_normal_45"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/padding_5"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/img_now_plan" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="今日工作情况"
+                        android:textColor="@color/word_4545"
+                        android:textSize="@dimen/font_size_14" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_1"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:background="@color/main_line" />
+
+                <EditText
+                    android:id="@+id/edt_today_plan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="请填写今日工作情况..."
+                    android:lineSpacingExtra="@dimen/line_3"
+                    android:minLines="4"
+                    android:padding="@dimen/margin_10"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+
+            </LinearLayout>
+
+            <include layout="@layout/item_line_height" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/bg_item_normal_45"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/padding_5"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/img_today_plan" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="明日计划情况"
+                        android:textColor="@color/word_4545"
+                        android:textSize="@dimen/font_size_14" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_1"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:background="@color/main_line" />
+
+                <EditText
+                    android:id="@+id/edt_tomorrow_plan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="请填写明天工作计划..."
+                    android:lineSpacingExtra="@dimen/line_3"
+                    android:minLines="4"
+                    android:padding="@dimen/margin_10"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_1"
+                    android:background="@color/main_line" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_submit_daily"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_20"
+                android:background="@drawable/bg_button_submit"
+                android:text="提交日报"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_16"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </com.tcrj.spv.views.control.SuperScrollView>
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@mipmap/bg_menu_top">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_center_photo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            app:srcCompat="@mipmap/logo" />
+
+        <TextView
+            android:id="@+id/tv_center_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_20"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_center_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginTop="@dimen/padding_3"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="normal" />
+    </LinearLayout>
+</RelativeLayout>

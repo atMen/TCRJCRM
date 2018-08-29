@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+
+    defaultConfig {
+        applicationId "com.tcrj.spv"
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode 3
+        versionName "3.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    sourceSets {
+        main
+                {
+                    jniLibs.srcDirs = ['libs']
+                }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro' +
+                    ''
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':xcontrol')
+    compile files('libs/AMap_Location_V3.6.1_20171012.jar')
+    compile files('libs/AMap_Search_V5.5.0_20171107.jar')
+    compile files('libs/Android_Map3D_SDK_V5.6.0_20171128.jar')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support:design:26.+'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.3.0'
+    compile 'io.reactivex:rxjava:1.3.0'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.github.bumptech.glide:glide:4.0.0-RC1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    compile 'com.pgyersdk:sdk:2.8.1'
+
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.7.0@aar'
+}

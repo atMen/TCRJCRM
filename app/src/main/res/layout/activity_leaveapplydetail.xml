@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/item_title" />
+
+    <com.tcrj.spv.views.control.SuperScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/bg_item_normal_50"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="姓\u3000\u3000名"
+                    android:textColor="@color/word_4545"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/tv_leave_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_1"
+                android:background="@color/main_line" />
+
+            <LinearLayout
+                style="@style/bg_item_normal_50"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="部\u3000\u3000门"
+                    android:textColor="@color/word_4545"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/tv_leave_department"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_1"
+                android:background="@color/main_line" />
+
+            <LinearLayout
+                style="@style/bg_item_normal_50"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="员工编号"
+                    android:textColor="@color/word_4545"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/tv_leave_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <include layout="@layout/item_line_height" />
+
+            <LinearLayout
+                style="@style/bg_item_normal_50"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="请假类别"
+                    android:textColor="@color/word_4545"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/tv_leave_ways"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/bg_7e00"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_1"
+                android:background="@color/main_line" />
+
+            <LinearLayout
+                style="@style/bg_item_normal_50"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="请假时间"
+                    android:textColor="@color/word_4545"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/tv_leave_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_1"
+                android:background="@color/main_line" />
+
+            <LinearLayout
+                style="@style/bg_item_normal_50"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="共计天数"
+                    android:textColor="@color/word_4545"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/tv_leave_days"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/main_blue"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <include layout="@layout/item_line_height" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="@dimen/padding_5"
+                android:layout_marginTop="@dimen/padding_5"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="请假事由"
+                    android:textColor="@color/word_4545"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/tv_leave_thing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:gravity="center_vertical"
+                    android:minLines="3"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <include layout="@layout/item_line_height" />
+
+            <LinearLayout
+                style="@style/bg_item_normal_50"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="部门审核"
+                    android:textColor="@color/word_4545"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/tv_leave_bm_depart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/word_8000"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_1"
+                android:background="@color/main_line" />
+
+            <LinearLayout
+                style="@style/bg_item_normal_50"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="审  核  人"
+                    android:textColor="@color/word_4545"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/tv_leave_bm_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_1"
+                android:background="@color/main_line" />
+
+            <LinearLayout
+                style="@style/bg_item_normal_50"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="日\u3000\u3000期"
+                    android:textColor="@color/word_4545"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/tv_leave_bm_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_leave_fzsh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/item_line_height" />
+
+                <LinearLayout
+                    style="@style/bg_item_normal_50"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text="副总审核"
+                        android:textColor="@color/word_4545"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <TextView
+                        android:id="@+id/tv_leave_fz_examine"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:gravity="right|center_vertical"
+                        android:textColor="@color/word_8000"
+                        android:textSize="@dimen/font_size_14" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_1"
+                    android:background="@color/main_line" />
+
+                <LinearLayout
+                    style="@style/bg_item_normal_50"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text="审  核  人"
+                        android:textColor="@color/word_4545"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <TextView
+                        android:id="@+id/tv_leave_fz_person"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:gravity="right|center_vertical"
+                        android:textColor="@color/word_7373"
+                        android:textSize="@dimen/font_size_14" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_1"
+                    android:background="@color/main_line" />
+
+                <LinearLayout
+                    style="@style/bg_item_normal_50"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text="日\u3000\u3000期"
+                        android:textColor="@color/word_4545"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <TextView
+                        android:id="@+id/tv_leave_fz_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:gravity="right|center_vertical"
+                        android:textColor="@color/word_7373"
+                        android:textSize="@dimen/font_size_14" />
+                </LinearLayout>
+
+                <include layout="@layout/item_line_height" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_leave_rlsp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/item_line_height" />
+
+                <LinearLayout
+                    style="@style/bg_item_normal_50"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text="人资审核"
+                        android:textColor="@color/word_4545"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <TextView
+                        android:id="@+id/tv_leave_rz_examine"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:gravity="right|center_vertical"
+                        android:textColor="@color/word_8000"
+                        android:textSize="@dimen/font_size_14" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_1"
+                    android:background="@color/main_line" />
+
+                <LinearLayout
+                    style="@style/bg_item_normal_50"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text="审  核  人"
+                        android:textColor="@color/word_4545"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <TextView
+                        android:id="@+id/tv_leave_rz_person"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:gravity="right|center_vertical"
+                        android:textColor="@color/word_7373"
+                        android:textSize="@dimen/font_size_14" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_1"
+                    android:background="@color/main_line" />
+
+                <LinearLayout
+                    style="@style/bg_item_normal_50"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text="日\u3000\u3000期"
+                        android:textColor="@color/word_4545"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <TextView
+                        android:id="@+id/tv_leave_rz_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:gravity="right|center_vertical"
+                        android:textColor="@color/word_7373"
+                        android:textSize="@dimen/font_size_14" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.tcrj.spv.views.control.SuperScrollView>
+</LinearLayout>

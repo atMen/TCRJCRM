@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/item_title" />
+
+    <com.tcrj.spv.views.control.SuperScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/bg_item_normal_50"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="\u3000姓\u3000\u3000名："
+                    android:textColor="@color/word_4545"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/tv_leave_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_1"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:background="@color/main_line" />
+
+            <LinearLayout
+                style="@style/bg_item_normal_50"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="\u3000部\u3000\u3000门："
+                    android:textColor="@color/word_4545"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/tv_leave_depart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_1"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:background="@color/main_line" />
+
+            <LinearLayout
+                style="@style/bg_item_normal_50"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="\u3000员工编号："
+                    android:textColor="@color/word_4545"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/tv_leave_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <include layout="@layout/item_spinner_list" />
+
+            <include layout="@layout/item_time_picker" />
+
+            <LinearLayout
+                style="@style/bg_item_normal_50"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="\u3000共计天数："
+                    android:textColor="@color/word_4545"
+                    android:textSize="@dimen/font_size_14" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_leave_days"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:textColor="@color/word_7373"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:text="天"
+                        android:textColor="@color/bg_7e00"
+                        android:textSize="@dimen/font_size_14" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_1"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:background="@color/main_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="\u3000请假理由："
+                    android:textColor="@color/word_4545"
+                    android:textSize="@dimen/font_size_14" />
+
+                <EditText
+                    android:id="@+id/edt_leave_thing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:background="@drawable/bg_edittext_input"
+                    android:gravity="top"
+                    android:hint="请输入事假理由"
+                    android:lineSpacingExtra="@dimen/padding_5"
+                    android:minLines="3"
+                    android:padding="@dimen/margin_10"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_leave_submit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bg_height_45"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@drawable/bg_button_submit"
+                android:text="提交申请"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_16"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </com.tcrj.spv.views.control.SuperScrollView>
+</LinearLayout>

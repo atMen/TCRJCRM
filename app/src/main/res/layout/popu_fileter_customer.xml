@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <ListView
+            android:id="@+id/type_listview"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/bg_height_300"
+            android:layout_weight="2"
+            android:divider="@color/main_line"
+            android:dividerHeight="@dimen/line_1"
+            android:fadingEdge="none"
+            android:listSelector="@color/main_bg"
+            android:scrollbars="none" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/bg_height_300"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/sort_listview"
+                layout="@layout/pulldown_listview" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

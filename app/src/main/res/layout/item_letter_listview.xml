@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_letter_index"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/bg_grid"
+        android:hint="A"
+        android:padding="@dimen/padding_5"
+        android:textColor="@color/main_blue"
+        android:textSize="@dimen/font_size_18"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_1"
+        android:background="@color/main_line" />
+
+    <LinearLayout
+        style="@style/bg_item_select_60"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_letter_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:paddingTop="@dimen/padding_3"
+            android:textColor="@color/word_7373"
+            android:textSize="@dimen/font_size_16" />
+
+        <TextView
+            android:id="@+id/tv_letter_job"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:paddingTop="@dimen/padding_3"
+            android:textColor="@color/word_7373"
+            android:textSize="@dimen/font_size_12" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <LinearLayout
+            style="@style/bg_item_normal_50"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="出差申请人"
+                android:textColor="@color/word_4545"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_travel_applyname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:gravity="right|center_vertical"
+                android:textColor="@color/word_7373"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_1"
+            android:background="@color/main_line" />
+
+        <LinearLayout
+            style="@style/bg_item_normal_50"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="申请人部门"
+                android:textColor="@color/word_4545"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_travel_depart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:gravity="right|center_vertical"
+                android:textColor="@color/word_7373"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_1"
+            android:background="@color/main_line" />
+
+        <LinearLayout
+            style="@style/bg_item_normal_50"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="\u3000同行人员"
+                android:textColor="@color/word_4545"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_travel_together"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:gravity="right|center_vertical"
+                android:textColor="@color/word_7373"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_1"
+            android:background="@color/main_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/padding_5"
+            android:layout_marginTop="@dimen/padding_5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="\u3000出差事由"
+                android:textColor="@color/word_4545"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_travel_thing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:gravity="center_vertical"
+                android:minLines="3"
+                android:textColor="@color/word_7373"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_1"
+            android:background="@color/main_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/padding_5"
+            android:layout_marginTop="@dimen/padding_5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="\u3000目标计划"
+                android:textColor="@color/word_4545"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_travel_plan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:gravity="center_vertical"
+                android:minLines="3"
+                android:textColor="@color/word_7373"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+        <include layout="@layout/item_line_height" />
+
+        <LinearLayout
+            style="@style/bg_item_normal_50"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="\u3000计划时间"
+                android:textColor="@color/word_4545"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_travel_plantime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:gravity="right|center_vertical"
+                android:textColor="@color/bg_7e00"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_1"
+            android:background="@color/main_line" />
+
+        <LinearLayout
+            android:visibility="gone"
+            style="@style/bg_item_normal_50"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="\u3000共计天数"
+                android:textColor="@color/word_4545"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_travel_plandays"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:gravity="right|center_vertical"
+                android:textColor="@color/word_6616"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_1"
+            android:background="@color/main_line" />
+
+        <LinearLayout
+            style="@style/bg_item_normal_50"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="\u3000目标地址"
+                android:textColor="@color/word_4545"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_travel_planaddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:gravity="right|center_vertical"
+                android:textColor="@color/main_blue"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_1"
+            android:background="@color/main_line" />
+
+        <LinearLayout
+            style="@style/bg_item_normal_50"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="\u3000交通工具"
+                android:textColor="@color/word_4545"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_travel_tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:gravity="right|center_vertical"
+                android:textColor="@color/main_blue"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+        <include layout="@layout/item_line_height" />
+
+        <LinearLayout
+            style="@style/bg_item_normal_50"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:src="@mipmap/img_expense_budget" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_5"
+                android:text="费用预算"
+                android:textColor="@color/word_4545"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_1"
+            android:background="@color/main_line" />
+
+        <LinearLayout
+            style="@style/bg_item_normal_50"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="\u3000交  通  费"
+                android:textColor="@color/word_4545"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_travel_carfare"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:gravity="right|center_vertical"
+                android:textColor="@color/word_8000"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_1"
+            android:background="@color/main_line" />
+
+        <LinearLayout
+            style="@style/bg_item_normal_50"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="\u3000住  宿  费"
+                android:textColor="@color/word_4545"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_travel_hotel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:gravity="right|center_vertical"
+                android:textColor="@color/word_8000"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_1"
+            android:background="@color/main_line" />
+
+        <LinearLayout
+            style="@style/bg_item_normal_50"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="\u3000其他杂费"
+                android:textColor="@color/word_4545"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_travel_others"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:gravity="right|center_vertical"
+                android:textColor="@color/word_8000"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_1"
+            android:background="@color/main_line" />
+
+        <LinearLayout
+            style="@style/bg_item_normal_50"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="\u3000费用合计"
+                android:textColor="@color/word_4545"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_travel_costtotal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:gravity="right|center_vertical"
+                android:textColor="@color/word_8000"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/layout_travel_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/item_line_height" />
+
+        <LinearLayout
+            style="@style/bg_item_normal_50"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="\u3000返还时间"
+                android:textColor="@color/word_4545"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_travel_sj_datetime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:gravity="right|center_vertical"
+                android:textColor="@color/word_6616"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/padding_5"
+            android:layout_marginTop="@dimen/padding_5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="\u3000出差总结"
+                android:textColor="@color/word_4545"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_travel_cc_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:gravity="center_vertical"
+                android:minLines="3"
+                android:textColor="@color/word_7373"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+        <include layout="@layout/item_line_height" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

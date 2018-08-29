@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_work_naturejob"
+            style="@style/bg_item_select_50"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:src="@mipmap/img_work_natrue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_5"
+                    android:text="工作性质"
+                    android:textColor="@color/word_4545"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/tv_work_naturejob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:hint="--请选择--"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_10"
+                android:src="@mipmap/img_drop_down" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_1"
+            android:background="@color/main_line" />
+
+        <LinearLayout
+            android:id="@+id/layout_work_project"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/bg_item_select_50"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:src="@mipmap/img_work_project" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_5"
+                        android:text="项目名称"
+                        android:textColor="@color/word_4545"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <TextView
+                        android:id="@+id/tv_work_project"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:hint="--请选择--"
+                        android:textColor="@color/word_7373"
+                        android:textSize="@dimen/font_size_14" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:text="*"
+                    android:textColor="@color/word_eb30"
+                    android:textSize="@dimen/font_size_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_1"
+                android:background="@color/main_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/bg_item_normal_50"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:src="@mipmap/img_customer_address" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_5"
+                        android:text="工作地点"
+                        android:textColor="@color/word_4545"
+                        android:textSize="@dimen/font_size_14" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edt_work_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:text="西安"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:textColor="@color/word_7373"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_1"
+                android:background="@color/main_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/bg_item_normal_50"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:src="@mipmap/img_work_time" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_5"
+                    android:text="工作工时"
+                    android:textColor="@color/word_4545"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edt_work_datetime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入工作工时"
+                android:inputType="numberDecimal"
+                android:lines="1"
+                android:maxLines="1"
+                android:textColor="@color/word_7373"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_1"
+            android:background="@color/main_line" />
+
+        <LinearLayout
+            style="@style/bg_item_normal_50"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:src="@mipmap/img_daily_date" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_5"
+                    android:text="加班时间"
+                    android:textColor="@color/word_4545"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edt_work_overtime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入加班时间"
+                android:inputType="numberDecimal"
+                android:lines="1"
+                android:maxLines="1"
+                android:textColor="@color/word_7373"
+                android:textSize="@dimen/font_size_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_1"
+            android:background="@color/main_line" />
+    </LinearLayout>
+</LinearLayout>

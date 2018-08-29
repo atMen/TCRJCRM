@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tcrj.spv">
+
+    <!-- 允许程序打开网络套接字 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission
+        android:name="android.permission.AUTHENTICATE_ACCOUNTS"
+        android:maxSdkVersion="22" />
+    <!-- <uses-permission -->
+    <!-- android:name="android.permission.GET_ACCOUNTS" -->
+    <!-- android:maxSdkVersion="22" /> -->
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="false"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name="com.tcrj.spv.views.application.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 正式 -->
+         <meta-data
+         android:name="com.amap.api.v2.apikey"
+         android:value="c266ae35ea24a0178455fd5fa4647a5c" />
+
+        <!-- debug -->
+        <!--<meta-data-->
+            <!--android:name="com.amap.api.v2.apikey"-->
+            <!--android:value="7368d2b4bf18dbe8a5d775bbc12f485a" />-->
+
+        <!-- 蒲公英-->
+        <meta-data
+            android:name="PGYER_APPID"
+            android:value="d92e6e93c8e93bca75996eec203ee2b7">
+        </meta-data>
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity
+            android:name="com.tcrj.spv.onePXactivity.HooliganActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|navigation|keyboard"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:finishOnTaskLaunch="false"
+            android:launchMode="singleInstance"
+            android:theme="@style/HooliganActivityStyle" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- 开启服务获取定位信息并上传服务器 -->
+        <service
+            android:name="com.tcrj.spv.service.MyIntentService"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.tcrj.spv.doubleprogress.AuthenticationService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+        <service
+            android:name="com.tcrj.spv.doubleprogress.SyncService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_adapter" />
+        </service>
+
+        <provider
+            android:name="com.tcrj.spv.doubleprogress.SyncProvider"
+            android:authorities="${applicationId}.sync_provider" />
+
+        <activity
+            android:name="com.tcrj.spv.WelcomeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tcrj.spv.views.MyApprovalDetailsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.WriteDailyActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.WriteDailyAddActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.LeaveApplyActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.TravelApplyActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.VisitSignActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.WriteFollowActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.CustomerInputActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.ExpatriateSignActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.ExpatriateSignOutActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.SignRecordActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.NoticeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.WorkDailyActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.LeaderExamineActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.NoticeDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.CommunicationListActvity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.CommunicationDetailActvity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.UpdatePwdActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.ConcerningActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.LeaveApplyDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <activity
+            android:name="com.tcrj.spv.views.NewLeaveApplyDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.NewNowLeaveApplyDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.ContactInputActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.MineCustomerActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.CustomerDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.ContactDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.FollowAddActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.FollowRecordDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.RelationManActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.TravelApplyDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.NewTravelApplyDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.NewNowTravelApplyDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <activity
+            android:name="com.tcrj.spv.views.TravelBackActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.VisitRecordActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.PositionInfoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.WriteDailyProjectActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.SignCustomerActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.GPSActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.WorkDailyItemActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.NewDayLogItemListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.LoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.FeedbackActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.MyFollowRecordSearchActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.tcrj.spv.views.GPSListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity android:name="com.tcrj.spv.views.SignMineCustomerActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+    </application>
+
+</manifest>
