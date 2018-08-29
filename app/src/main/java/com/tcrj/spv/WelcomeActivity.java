@@ -93,6 +93,10 @@ public class WelcomeActivity extends BaseActivity {
 
     private Api api;
     private void toLogin() {
+
+        String machineImei = PhoneInfo.getMachineImei(this);
+        String imei = PhoneInfo.getImei(this);
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BaseApplication.getConfig())
                 .addConverterFactory(GsonConverterFactory.create())
