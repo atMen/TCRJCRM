@@ -16,6 +16,7 @@ import com.tcrj.spv.presenter.UserInfoPresenter;
 import com.tcrj.spv.views.application.BaseActivity;
 import com.tcrj.spv.views.application.BaseApplication;
 import com.tcrj.spv.views.utils.LogUtils;
+import com.tcrj.spv.views.utils.PhoneInfo;
 
 /**
  * 用户登录
@@ -129,11 +130,13 @@ public class LoginActivity extends BaseActivity implements UserInfoCallBack.View
 
     @Override
     public ParameterEntity setParameter() {
+        String uniqueId = PhoneInfo.getUniqueId(this);
         String account = edtUesraccount.getText().toString().trim();
         String password = edtUserpassword.getText().toString().trim();
         ParameterEntity entity = new ParameterEntity();
         entity.setUserName(account);
         entity.setUserPwd(password);
+        entity.setAddress(uniqueId);
         LogUtils.info(TAG, entity);
         return entity;
     }

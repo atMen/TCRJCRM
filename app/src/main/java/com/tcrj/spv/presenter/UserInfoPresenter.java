@@ -7,6 +7,7 @@ import com.tcrj.spv.model.ParameterEntity;
 import com.tcrj.spv.model.UserInfoEntity;
 import com.tcrj.spv.views.application.BaseApplication;
 import com.tcrj.spv.views.utils.Api;
+import com.tcrj.spv.views.utils.PhoneInfo;
 
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
@@ -33,6 +34,8 @@ public class UserInfoPresenter implements UserInfoCallBack.Presenter {
      */
     @Override
     public void loadData() {
+
+
         ParameterEntity entity = view.setParameter();
         view.LoadingOn();
         Retrofit retrofit = new Retrofit.Builder()
@@ -42,7 +45,7 @@ public class UserInfoPresenter implements UserInfoCallBack.Presenter {
                 .build();
         api = retrofit.create(Api.class);
         Log.e("TAG","登录信息："+entity.getUserName()+"--"+entity.getUserPwd());
-        api.getLoginInfo(new UserInfoEntity(entity.getUserName(), entity.getUserPwd(), "120c83f7602202584d2", "android"))
+        api.getLoginInfo(new UserInfoEntity(entity.getUserName(), entity.getUserPwd(), "120c83f7602202584d2", "android"+entity.getAddress()))
                 .subscribeOn(Schedulers.io())               //http请求线程
                 .observeOn(AndroidSchedulers.mainThread())  //回调线程
                 .subscribe(new Observer<UserInfoEntity>() {

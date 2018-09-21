@@ -45,10 +45,10 @@
     <application
         android:name="com.tcrj.spv.views.application.BaseApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/logo"
+        android:icon="@mipmap/newlogin"
         android:label="@string/app_name"
         android:persistent="true"
-        android:roundIcon="@mipmap/logo"
+        android:roundIcon="@mipmap/newlogin"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 

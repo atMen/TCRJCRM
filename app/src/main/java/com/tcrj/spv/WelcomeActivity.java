@@ -69,7 +69,6 @@ public class WelcomeActivity extends BaseActivity {
 
         setContentView(R.layout.activity_welcome);
 
-        getPhoneInfo();
 
         getLoginInfo();
 
@@ -85,25 +84,18 @@ public class WelcomeActivity extends BaseActivity {
 
     }
 
-    private void getPhoneInfo() {
-        String machineImei = PhoneInfo.getMachineImei(this);
-        String imei = PhoneInfo.getImei(this);
-        Log.e("TAG","machineImei:"+machineImei+"---imei:"+imei);
-    }
+
 
     private Api api;
     private void toLogin() {
-
-        String machineImei = PhoneInfo.getMachineImei(this);
-        String imei = PhoneInfo.getImei(this);
-
+        String uniqueId = PhoneInfo.getUniqueId(this);
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BaseApplication.getConfig())
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
         api = retrofit.create(Api.class);
-        api.getLoginInfo(new UserInfoEntity(name, pwd, "120c83f7602202584d2", "android"))
+        api.getLoginInfo(new UserInfoEntity(name, pwd, "120c83f7602202584d2", "android"+uniqueId))
                 .subscribeOn(Schedulers.io())               //http请求线程
                 .observeOn(AndroidSchedulers.mainThread())  //回调线程
                 .subscribe(new Observer<UserInfoEntity>() {
